@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script>
+            function validateform(){
+              
+                
+                let username=document.myform.username.value;
+                let password=document.myform.password.value;
+                if(username==""||username==NULL){
+                    alert('the username cant be empty');
+                    return false;
+
+
+                    }else if(password.length<8){
+                        
+                        alert('the password should contain minimum 8 characters');
+                        return false;
+                    }
+                
+            
+                }
+        </script>
+    </head>
+    <body>
+        <form name="myform" onsubmit="return validateform()"      >
+            Username <input type="text" name="username" id="username"><br><br>
+            Phone number <input type="number" name="phone" id="phone"><br><br>
+            password <input type="password" name="password" ><br>
+            <input type="submit" >
+        </form>
+       
+    </body>
+</html>
