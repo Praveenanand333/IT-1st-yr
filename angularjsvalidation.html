@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+    
+</script>  
+<script>
+    function validate(){
+        
+        var username=document.myform.username.value;
+        var password=document.myform.password.value;
+        if(username==''){
+            alert('username cant be empty');
+            return false;
+        }
+        else if(password.length<6){
+            alert('password should be minimum 6 characters');
+            return false;
+        }
+    }
+</script>
+<body ng-app="">
+
+<p>Try writing in the input field:</p>
+
+<form name="myform">
+Username<input name="username" ng-model="username" required><br><br>
+Password<input type="password" name="password" ng-model="password" required><br><br>
+Email<input type="email" name="email" ng-model="email" required><br><br>
+</b>
+<input type="button" onclick="validate()">
+</form>
+
+
+<h1>The state of username is  {{myform.username.$valid}}</h1>
+<h1>The state of password is  {{myform.password.$valid}}</h1>
+<h1>The state of password is  {{myform.email.$valid}}</h1>
+
+</body>
+</html>
