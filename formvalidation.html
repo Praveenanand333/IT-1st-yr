@@ -13,6 +13,27 @@
                 var address=document.myform.address.value;
                 var rollno=document.myform.rollno.value;
                 var nusername=parseInt(username);
+                var dob=document.myform.dob.value;
+                var college=document.myform.college.value;
+                var department=document.myform.department.value;
+                var interest=document.myform.interest.value;
+                if(interest==""){
+                    alert('please fill the interest field');
+                    return false;
+                }
+                if(department==""){
+                    alert('enter your department name');
+                    return false;
+                }
+                if(college==""){
+                        alert('please enter your college name');
+                        return false;
+                    }
+                   
+                    if(dob==""){
+                            alert('please enter the date of birth');
+                            return false;
+                        }
                 if(username==""){
                     alert('the username cant be empty');
                     return false;
@@ -39,6 +60,7 @@
                         alert('rollno cant be empty');
                         return false;
                     }
+                   
                 
             
                 }
@@ -51,9 +73,16 @@
           <h3>  Username <input type="text" name="username" id="username"><br><br>
             Phone number <input type="number" name="phone" id="phone"><br><br>
             Password <input type="password" name="password" ><br><br>
+            DOB<input type="date" name="dob"><br><br>
             Email <input type="email" name="email"><br><br>
             Address<br><textarea name="address" rows="10" cols="30"></textarea><br><br>
-            Rollno <input type="number" name="rollno"><br><br></h3>
+            Rollno <input type="number" name="rollno"><br><br>
+            Enter your college name<input type="text" name="college"><br><br>
+            Enter your department name<input type="text" name="department"><br><br>
+            Enter your area of interest<input type="text" name="text"><br><br>
+            
+        </h3>
+
 
 
             <input type="submit" >
