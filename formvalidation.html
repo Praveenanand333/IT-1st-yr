@@ -5,9 +5,7 @@
             javascript validation
         </title>
         <script>
-            function validateform(){
-              
-                
+            function validateform(){ 
                 let username=document.myform.username.value;
                 let password=document.myform.password.value;
                 var address=document.myform.address.value;
@@ -17,29 +15,11 @@
                 var college=document.myform.college.value;
                 var department=document.myform.department.value;
                 var interest=document.myform.interest.value;
-                if(interest==""){
-                    alert('please fill the interest field');
+                if(interest==""||department==""||college
+                ==""||dob==""||username==""||email==""||address==""||rollno==""){
+                    alert('no field should be empty');
                     return false;
-                }
-                if(department==""){
-                    alert('enter your department name');
-                    return false;
-                }
-                if(college==""){
-                        alert('please enter your college name');
-                        return false;
-                    }
-                   
-                    if(dob==""){
-                            alert('please enter the date of birth');
-                            return false;
-                        }
-                if(username==""){
-                    alert('the username cant be empty');
-                    return false;
-
-
-                    }else if(password.length<8){
+                }  else if(password.length<8){
                         
                         alert('the password should contain minimum 8 characters');
                         return false;
@@ -47,23 +27,7 @@
                     if(!isNaN(nusername)){
                         alert('username cant be number');
                         return false;
-                    }
-                    if(email==""){
-                        alert('email cant be empty');
-                        return false;
-                    }
-                    if(address==""){
-                        alert('address cant be empty');
-                        return false;
-                    }
-                    if(rollno==""){
-                        alert('rollno cant be empty');
-                        return false;
-                    }
-                   
-                
-            
-                }
+                    }        }
         </script>
     </head>
     <body>
@@ -79,16 +43,10 @@
             Rollno <input type="number" name="rollno"><br><br>
             Enter your college name<input type="text" name="college"><br><br>
             Enter your department name<input type="text" name="department"><br><br>
-            Enter your area of interest<input type="text" name="text"><br><br>
-            
+            Enter your area of interest<input type="text" name="text"><br><br>        
         </h3>
-
-
-
-            <input type="submit" >
-            
+            <input type="submit" >    
         </center>
-        </form>
-       
+        </form> 
     </body>
 </html>
