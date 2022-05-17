@@ -1,39 +1,29 @@
 <!DOCTYPE html>
 <html>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
-    
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">   
 </script>  
-<script>
-    function validate(){
-        
-        var username=document.myform.username.value;
-        var password=document.myform.password.value;
-        if(username==''){
-            alert('username cant be empty');
-            return false;
-        }
-        else if(password.length<6){
-            alert('password should be minimum 6 characters');
-            return false;
-        }
+<style>
+    input{
+        background-color: red;
     }
-</script>
+input.ng-valid{
+    background-color:green;
+}
+h1{
+
+    text-align: center;
+}
+</style>
 <body ng-app="">
-
-<p>Try writing in the input field:</p>
-
+    <h1>My Form</h1>
 <form name="myform">
-Username<input name="username" ng-model="username" required><br><br>
-Password<input type="password" name="password" ng-model="password" required><br><br>
-Email<input type="email" name="email" ng-model="email" required><br><br>
-</b>
-<input type="button" onclick="validate()">
+Username<input name="username" ng-model="username" id="username" required><div ng-show="!myform.username.$valid && myform.username.$touched">incorrect username</div><br><br>
+Password<input type="password" name="password" ng-model="password" required><div ng-show="!myform.password.$valid && myform.password.$touched">invalid password</div><br><br>
+Email<input type="email" name="email" ng-model="email" required><div ng-show="!myform.email.$valid && myform.email.$touched">invalid email</div><br><br>
+Phone number<input type="number" name="number" id="number" ng-model="number" required><div ng-show="!myform.number.$valid && myform.number.$touched">invalid number</div><br><br>
+DOB<input type="date" name="dob" id="dob" ng-model="dob" required><div ng-show="!myform.dob.$valid && myform.dob.$touched">invalid DOB</div><br><br>
+Favourite cricketer<input type="text" name="cricketer" ng-model="cricketer" required><div ng-show="!myform.cricketer.$valid && myform.cricketer.$touched">please enter cricketer name</div><br><br>
+<input type="submit">
 </form>
-
-
-<h1>The state of username is  {{myform.username.$valid}}</h1>
-<h1>The state of password is  {{myform.password.$valid}}</h1>
-<h1>The state of password is  {{myform.email.$valid}}</h1>
-
 </body>
 </html>
