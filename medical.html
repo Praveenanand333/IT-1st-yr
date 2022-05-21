@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="med.css">
+    <title>MEDICAL FORM</title>
+    <script src="validate.js"></script>
+</head>
+
+<body>
+    <form name="myform" onsubmit="return validate()">
+        <fieldset id="m1">
+            <legend>Personal Information</legend>
+            <table>
+                <tr>
+                    <td><label>First Name</label></td>
+                    <td><input type="text" name="FirstName" maxlength="50"></td>
+                    <td><label>Gender</label></td>
+                    <td><input type="radio" name="gender" value="female">Female
+                        <input type="radio" name="gender" value="male">Male</td>
+                </tr>
+                <tr>
+                    <td><label>Last Name</label></td>
+                    <td><input type="text" name="LastName" maxlength="50"></td>
+                    <td><label>Nationality</label></td>
+                    <td><select name="nationality">
+                        <option value="canadian">Canadian</option>
+                        <opotion value="indian">Indian</opotion>
+                        <option value="chinese">Chinese</option>
+                        <option value="russian">Russian</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><label>Address</label></td>
+                    <td colspan="3"><textarea name="address" maxlength="300"></textarea></td>
+                </tr>
+                </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Medical History</legend>
+            <input type="checkbox" name="Smallpox" value="yes">
+            <label>Smallpox</label>
+            <input type="checkbox" name="mumps" value="yes">
+            <label>Mumps</label>
+            <input type="checkbox" name="Dizziness" value="yes">
+            <label>Dizziness</label>
+            <input type="checkbox" name="Sneezing" value="yes">
+            <label>Sneezing</label>
+        </fieldset>
+        <fieldset>
+            <legend>Current Medication</legend>
+            <label>Are you currently taking any medication?</label>
+            <input type="radio" name="a" value="yes">Yes
+            <input type="radio" name="a" value="no">No<br>
+            <label>If you are currently taking medication, please indicate it in the space below:</label><br>
+            <textarea rows="10" cols="165" name="area"></textarea>
+        </fieldset>
+        <input type="submit" name="submit">
+        <button>Reset</button>
+        <button onclick="validate()">click</button>
+    </form>
+</body>
+
+</html>
