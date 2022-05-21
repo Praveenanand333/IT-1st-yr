@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset="UTF-8">
+<title>FUEL MILEAGE</title>
+</head>
+<body>
+<form>
+<label>start reading</label>
+<input type="text" name="start reading" id="sr"><br><br>
+<label>end reading</label>
+<input type="text" name="end reading" id="er"><br><br>
+<label>No.of Litres</label>
+<input type="text" name="No. of Litres" id="nl"><br><br>
+<button type="button" onclick="myfunction();">submit</button>
+</form>
+<script>
+    function myfunction(){
+    var va1=document.getElementById('sr').value;
+	var va2=document.getElementById('er').value;
+	var va3=document.getElementById('nl').value;
+	var m1=parseInt(va1);
+	var m2=parseInt(va2);
+	var m3=parseInt(va3);
+	document.write("fuel mileage="+((m2-m1)/m3));
+    }
+</script>
+</body>
+</html>
