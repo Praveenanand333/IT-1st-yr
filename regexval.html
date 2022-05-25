@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>regex</title>
+        <p id="demo"></p>
+        <script>
+            function regexval(){
+var email=document.myform.email.value;
+var pattern=/@/g;//if there is a @ in the text returns the same @ no of times
+var pattern1=/.com/g;
+var caps=/[A-Z]/g;
+
+//var pattern2=/^h/g; if there is any h in text it removes h and returns everything except h
+
+var symbol=email.match(pattern);
+var end=email.match(pattern1);
+var capsm=email.match(caps);
+let text = "Is this all there is?";
+let pattern3= /[^\s]/g;
+let result = text.match(pattern3);//always use for loop for displaying result coz if not used result will have comma in bteween charcaters
+var text1="";
+for(var i=0;i<result.length;i++){
+
+text1+=result[i];
+
+
+}
+document.getElementById('demo').innerHTML=text1;
+if(symbol==null||email==null||capsm!=null){
+    alert('enter valid email address');
+
+}
+var username=document.myform.username.value;
+var pattern4=/\W/g;
+var uresult=username.match(pattern4);
+if(uresult!=null){
+    alert('no special characters are allowed in username')
+}
+            }
+        </script>
+    </head>
+    <body>
+        <form  name="myform" onsubmit="return false">
+            Username:<input type="text" name="username"><br>
+            Email:<input type="text" name="email">
+            <button onclick="regexval()">click me</button>
+        </form>
+    </body>
+</html>
