@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <style>
+        form,
+        h1 {
+            margin-left: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>STUDENT REGISTRATION FORM</h1>
+    <HR>
+
+    <form name="myform" action="studentregistration.php">
+
+
+        Roll no:<input type="number" name="rollno"><br><br> Name:
+        <input type="text" name="name"><br><br>DOB<input type="date" name="dob"><br> <br>Enter your bloodgroup
+        <select name="bloodgrp">
+            <option value="A+">A+</option>
+            <option value="AB+">AB+</option>
+            <option value="B+">B+</option>
+            <option value="A-">A-</option>
+            <option value="AB-">AB-</option>
+            <option value="B-">B-</option>
+        </select><br><br> Mobile number:
+
+        <input type='tel' name="number"><br><br> Enter your father's name:<input type="text" name="fathersname">
+        <br><br> Enter your mother's name:<input type="text" name="mothersname"> <br><br>Address :<textarea name="address"></textarea> <br>
+        <br>Please specify whether you are intersted or not in <input type="radio" name="willingness" value="yes" id="yes">
+        <label for="yes">YES</label> <input type="radio" name="willingness" value="no" id="no">
+        <label for="no">NO</label>
+        <br><br> <input type="submit"></form>
+</body>
+
+</html>
