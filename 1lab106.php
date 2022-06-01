@@ -1,5 +1,6 @@
 <?php
 //to swap two numbers
+echo '<hr>';
 $a=10;
 $b=20;
 function swapnum($a,$b){
@@ -13,6 +14,7 @@ echo 'After swapping<br>';
 echo 'The value of a is'.$a.'<br>';
 echo 'The value of b is '.$b.'<br>';}
 swapnum($a,$b);
+echo '<hr>';
 //end of swap num
 
 //armstrong number
@@ -35,6 +37,7 @@ else{
 }
 }
 armstrong($c);
+echo '<hr>';
 //end of armstrong number
 
 //reversing a number and palindrome
@@ -57,6 +60,7 @@ else{
 
 }}
 palindrome($num1);
+echo '<hr>';
 //end of reverse and palindrome number
 //prime number
 $num2=19;
@@ -74,6 +78,7 @@ else{
     echo 'the number is not prime number'.'<br>';
 }}
 primecheck($num2);
+echo '<hr>';
 //end of prime number
 
 //factorial
@@ -90,6 +95,7 @@ function fact($num3){
 fact($num3);
 
 // end of factorial
+echo '<hr>';
 
 //fibonacci series 
 $num4=10;
@@ -110,6 +116,7 @@ $n2=$n3;
 }
 fib($num4);
 //end of fibonacciseries
+echo '<hr>';
 
 //reverse a string
 $str='welcometophp';
