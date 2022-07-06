@@ -1,13 +1,24 @@
 <html>
+    <head>
+        <style>
+            body{
+                text-align:center;
+                font-size:30px;
+            }
+            </style>
+</head>
     <body>
+        <h1>FLAMES CALCULATOR</h1>
         <form action='flames.php'>
     Name1:<input type='text' name='name1'>
-    <br>Name2:<input type='text' name='name2'>
+    <br>Name2:<input type='text' name='name2'><br>
     <input type='submit' >
     </form>
 </body>
     </html>
 <?php
+$con=new mysqli('localhost','root','','flames');
+
 if(isset($_REQUEST['name1'])&& isset($_REQUEST['name2'])){
 $name1=$_REQUEST['name1'];
 $name2=' '.$_REQUEST['name2'];
@@ -46,9 +57,11 @@ while(strlen($flames)!=1){
     }
 
 }
-echo  $flames;
-if($flames=='F'){
-    echo $n11.'and'.$n22.'are friends';
+echo  'The result is'.' '.$flames;
+if(isset($_REQUEST['name1'])&& isset($_REQUEST['name2'])){
+    $query0="insert into flamesdata values('".$_REQUEST['name1']."','".$_REQUEST['name2']."','".$flames."')";
+    $r=$con->query($query0);
+
 }
 }
 ?>
